@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <!-- Site Title -->
+    <title>Order Success - Aidventure</title>
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/venobox.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <style>
+        .order-success {
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .success-icon {
+            font-size: 80px;
+            color: #4CAF50;
+            margin-bottom: 30px;
+        }
+        
+        .order-details {
+            background: #f7f7f7;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+        
+        .order-products {
+            margin: 30px 0;
+        }
+        
+        .product-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .product-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header section from your template -->
+    <header class="header header-2 header-3 mb-0 sticky-active" style="--rr-color-theme-primary: #885B3A">
+        <!-- Header content similar to other pages -->
+        <div class="header-top-text">
+            <span>Welcome to Aidventure</span>
+        </div>
+        <!-- Rest of the header -->
+    </header>
+    
+    <section class="page-header">
+        <div class="shape"><img src="assets/img/shapes/page-header-shape.png" alt="shape"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="title">Order Confirmation</h1>
+                <h4 class="sub-title">
+                    <span class="home">
+                        <a href="index.html">
+                            <span>Home</span>
+                        </a>
+                    </span>
+                    <span class="icon"><i class="fa-solid fa-angle-right"></i></span>
+                    <span class="inner">
+                        <span>Order Success</span>
+                    </span>
+                </h4>
+            </div>
+        </div>
+    </section>
+    
+    <section class="order-success pt-130 pb-130">
+        <div class="container">
+            <div class="success-icon">
+                <i class="fa fa-check-circle"></i>
+            </div>
+            <h2>Thank You for Your Order!</h2>
+            <p>Your order has been received and is being processed.</p>
+            
+            <div class="order-details" id="order-details">
+                <h3>Order Summary</h3>
+                <div id="order-info">
+                    <!-- Order details will be populated with JavaScript -->
+                </div>
+                
+                <h4 class="mt-4">Products Ordered</h4>
+                <div class="order-products" id="order-products">
+                    <!-- Product items will be populated with JavaScript -->
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="shop.html" class="rr-primary-btn">Continue Shopping</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer section from your template -->
+    <footer class="footer-section bg-grey pt-60">
+        <!-- Footer content similar to other pages -->
+    </footer>
+    
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquary-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/bootstrap-bundle.js"></script>
+    <!-- Other scripts -->
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve the last order from localStorage
+            const lastOrder = JSON.parse(localStorage.getItem('lastOrder'));
+            
+            if (lastOrder) {
+                // Populate order info
+                const orderInfoEl = document.getElementById('order-info');
+                const orderDate = new Date(lastOrder.date).toLocaleDateString();
+                
+                orderInfoEl.innerHTML = `
+                    <div class="detail-item">
+                        <strong>Order Date:</strong>
+                        <span>${orderDate}</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Name:</strong>
+                        <span>${lastOrder.customer.firstName} ${lastOrder.customer.lastName}</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Email:</strong>
+                        <span>${lastOrder.customer.email}</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Shipping Address:</strong>
+                        <span>${lastOrder.customer.address}, ${lastOrder.customer.city}, ${lastOrder.customer.zipCode}</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Payment Method:</strong>
+                        <span>${lastOrder.payment.replace('_', ' ').toUpperCase()}</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Total:</strong>
+                        <span>₹${lastOrder.total.toFixed(2)}</span>
+                    </div>
+                `;
+                
+                // Populate order products
+                const orderProductsEl = document.getElementById('order-products');
+                let productsHTML = '';
+                
+                lastOrder.items.forEach(item => {
+                    productsHTML += `
+                        <div class="product-item">
+                            <img src="${item.image || 'assets/img/shop/shop-thumb-1.png'}" alt="${item.title}" class="product-image">
+                            <div class="product-info">
+                                <h5>${item.title}</h5>
+                                <p>Quantity: ${item.quantity} × ₹${item.price.toFixed(2)}</p>
+                                <p><strong>Total: ₹${(item.price * item.quantity).toFixed(2)}</strong></p>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                orderProductsEl.innerHTML = productsHTML;
+            } else {
+                // If no order found, show a message
+                document.getElementById('order-details').innerHTML = `
+                    <div class="text-center">
+                        <p>No order information found. Please check your order history.</p>
+                        <a href="index.html" class="rr-primary-btn mt-3">Return to Home</a>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

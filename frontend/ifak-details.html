@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    
+
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+
+        <!-- Site Title -->
+        <title>Aidventure</title>
+
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+        <!-- CSS here -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <link rel="stylesheet" href="assets/css/venobox.min.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/swiper.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+
+    <body>
+        <!-- header-area-start -->
+        <header class="header header-2 header-3 mb-0 sticky-active" style="--rr-color-theme-primary: #885B3A">
+            <div class="header-top-text">
+                <span>Welcome to Aidventure</span>
+            </div>
+            <div class="top-bar">
+                <div class="container">
+                    <div class="top-bar-inner">
+                        <div class="top-bar-left">
+                            <ul class="top-left-list">
+                               
+                              
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                        <div class="top-bar-right">
+                            <span>Call Us 24/7: <a href="tel:+258326821485">+0124 4223615</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-middle">
+                <div class="container">
+                    <div class="header-middle-inner">
+                        <div class="header-middle-left">
+                            <div class="header-logo d-lg-block">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/logo-3.png" alt="Logo">
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="header-middle-right">
+                            <ul class="contact-item-list">
+                                <li>
+                                    <a href="wishlist.html" class="icon">
+                                        <i class="fa-sharp fa-regular fa-heart"></i>
+                                    </a>
+                                </li>
+                                <li><a href="register.html" class="login-btn">Login / Register</a></li>
+                                <li>
+                                    <div class="header-cart-btn">
+                                        <a href="cart.html" class="icon">
+                                            <i class="fa-light fa-bag-shopping"></i>
+                                        </a>
+                                        <span>₹0.00</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="primary-header">
+                <div class="container">
+                    <div class="primary-header-inner">
+                        <div class="header-logo mobile-logo">
+                            <a href="index.html">
+                                <img src="assets/img/logo/logo-3.png" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="header-menu-wrap">
+                            <div class="mobile-menu-items">
+                                <ul>
+                                    <li class="menu-item-has-children active">
+                                        <a href="index.html">Home</a>
+                                        
+                                    </li>
+									<li class="menu-item-has-children ">
+                                        <a href="about.html">About</a>
+                                        
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="shop.html">Medical Kits</a>
+                                        <ul>
+                                            <li><a href="combat.html">Combat</a></li>
+                                            <li><a href="industrial.html">Industrial</a></li>
+                                          <li><a href="adventure.html">Adventure</a></li>
+                                          
+                                        </ul>
+                                    </li>
+                                    
+                                    
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Expendables</a>
+                                        
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.header-menu-wrap -->
+						 <div class="header-right-wrap">
+                            <div class="header-right">
+                                
+                                <div class="header-right-item">
+                                    <a href="javascript:void(0)" class="mobile-side-menu-toggle"><i class="fa-sharp fa-solid fa-bars"></i></a>
+                                </div>
+                            </div>
+                            <!-- /.header-right -->
+                        </div>
+                        
+                    </div>
+                    <!-- /.primary-header-inner -->
+                </div>
+            </div>
+        </header>
+        <!-- /.Main Header -->
+
+        <div id="popup-search-box">
+            <div class="box-inner-wrap d-flex align-items-center">
+                <form id="form" action="#" method="get" role="search">
+                    <input id="popup-search" type="text" name="s" placeholder="Type keywords here...">
+                </form>
+                <div class="search-close"><i class="fa-sharp fa-regular fa-xmark"></i></div>
+            </div>
+        </div>
+        <!-- /#popup-search-box -->
+
+        <div class="mobile-side-menu" style="--rr-color-theme-primary: #885B3A">
+            <div class="side-menu-content">
+                <div class="side-menu-head">
+                    <a href='index.html'><img src="assets/img/logo/logo-3.png" alt="logo"></a>
+                    <button class="mobile-side-menu-close"><i class="fa-regular fa-xmark"></i></button>
+                </div>
+                <div class="side-menu-wrap"></div>
+                <ul class="side-menu-list">
+                    <li><i class="fa-light fa-location-dot"></i>Address : <span>Amsterdam, 109-74</span></li>
+                    <li><i class="fa-light fa-phone"></i>Phone : <a href="tel:+01569896654">+01 569 896 654</a></li>
+                    <li><i class="fa-light fa-envelope"></i>Email : <a href="mailto:info@example.com">info@example.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.mobile-side-menu -->
+
+        <div id="preloader" style="--rr-color-theme-primary: #885B3A">
+            <div class="preloader-close">X</div>
+            <div class="sk-three-bounce">
+                <div class="sk-child sk-bounce1"></div>
+                <div class="sk-child sk-bounce2"></div>
+                <div class="sk-child sk-bounce3"></div>
+            </div>
+        </div>
+        <!-- ./ preloader -->
+        <section class="page-header">
+            <div class="shape"><img src="assets/img/shapes/page-header-shape.png" alt="shape"></div>
+            <div class="container">
+                <div class="page-header-content">
+                    <h1 class="title">IFAK Details</h1>
+                    <h4 class="sub-title">
+                        <span class="home">
+                            <a href="#">
+                                <span>Home</span>
+                            </a>
+                        </span>
+                        <span class="icon"><i class="fa-solid fa-angle-right"></i></span>
+                        <span class="inner">
+                            <span>IFAK Details</span>
+                        </span>
+                    </h4>
+                </div>
+            </div>
+        </section>
+        <!-- ./ page-header -->
+
+        <section class="shop-section single pt-100 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 product-details-wrap">
+                        <div class="product-slider-wrap">
+                            <div class="swiper product-gallary-thumb">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="thumb-item">
+                                            <img src="assets/img/shop/shop-thumb-1.png" alt="shop">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumb-item">
+                                            <img src="assets/img/shop/shop-thumb-2.png" alt="shop">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumb-item">
+                                            <img src="assets/img/shop/shop-thumb-3.png" alt="shop">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper product-gallary">
+                                <span class="sale">Sale</span>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="gallary-item">
+                                            <img src="assets/img/shop/shop-slider-1.jpg" alt="shop">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallary-item">
+                                            <img src="assets/img/shop/shop-slider-2.jpg" alt="shop">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallary-item">
+                                            <img src="assets/img/shop/shop-slider-3.jpg" alt="shop">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-nav-next"><i class="las la-arrow-right"></i></div>
+                                <div class="swiper-nav-prev"><i class="las la-arrow-left"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="product-details">
+                            <div class="product-info">
+                                <div class="product-inner">
+                                    <span class="category">Medical Kit</span>
+                                    <h3 class="title">Individual First Aid Kit</h3>
+                                    <div class="rating-wrap">
+                                        <ul class="rating">
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                        </ul>
+                                        <span>(1 customer review)</span>
+                                    </div>
+                                    <h4 class="price">Rs. 13500.00 <span>Rs. 15000.00</span></h4>
+                                    <div class="product-desc-wrap">
+                                        <p class="desc">The medical kits provided are designed to provide soldiers with the right equipment
+at the right time at the point of injury and during transportation to a medical
+treatment facility.</p>
+                                       
+                                    </div>
+                                    <div class="item-left-line">
+                                        <span>Only 15 items left in stock!</span>
+                                        <div class="line"></div>
+                                    </div>
+                                    <ul class="details-list">
+                                        <li><i class="fa-light fa-arrow-right-arrow-left"></i>Free returns</li>
+                                        <li><i class="fa-light fa-truck"></i>Free shipping, fully insured</li>
+                                        <li><i class="fa-light fa-circle-check"></i>All taxes included</li>
+                                    </ul>
+                                </div>
+                                <div class="product-btn">
+                                    <form>
+                                        <input type="number" name="age" id="age" min="1" max="100" step="1" value="1">
+                                    </form>
+                                    <div class="cart-btn-wrap-2"><a href="#" class="rr-primary-btn cart-btn">Add To Cart</a></div>
+                                </div>
+                                <a href="#" class="shop-details-btn rr-primary-btn">Buy The Item Now</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Shop Section-->
+
+        <section class="product-description pb-100">
+            <div class="container">
+                <ul class="nav tab-navigation" id="product-tab-navigation" role="tablist">
+                    <li role="presentation">
+                        <button class="active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                            role="tab" aria-controls="home" aria-selected="true">Description</button>
+                    </li>
+                    <li role="presentation">
+                        <button id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab"
+                            aria-controls="profile" aria-selected="false">Additional information</button>
+                    </li>
+                    
+                </ul>
+                <div class="tab-content" id="product-tab-content">
+                    <div class="tab-pane fade show active description" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="desc-wrap">
+                            <div class="left-content">
+                                <p class="mb-30">Credibly negotiate emerging materials whereas clicks-and-mortar intellectual capital. Compellingly whiteboard client-centric sourcescross-platform schemas. Distinctively develop future-proof outsourcing without multimedia based portals. Progressively coordinate generation architectures for collaborative solutions. Professionally restore backward-compatible quality vectors before customer directed metrics. Holisticly restore technically sound internal or "organic" sources before client-centered human capital underwhelm holistic mindshare for prospective innovation.</p>
+                                <p class="mb-0">Seamlessly target fully tested infrastructures whereas just in time process improvements. Dynamically exploit team driven functionalities vis a vis global total linkage redibly synthesize just in time technology rather than open-source strategic theme areas.</p>
+                            </div>
+                            <div class="right-content">
+                                <img src="assets/img/shop/shop-details-img.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <table class="table product-table table-condensed">
+                            <thead>
+                                <tr>
+								    <th scope="col">S.No</th>
+                                    <th scope="col">Item Name</th>
+                                    <th scope="col">Quantity</th>
+                                   
+                                </tr>
+                            </thead>
+                          <tbody>
+
+<tr style="height: 26.25pt;">
+<td style="height: 26.25pt;" align="right" height="35">1</td>
+<td class="et3" style="width: 217.50pt;" width="290">Equipment Pouch</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+<tr style="height: 15.75pt;">
+<td style="height: 15.75pt;" align="right" height="21">2</td>
+<td class="et3" style="width: 217.50pt;" width="290">Labels</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+<tr style="height: 15.75pt;">
+<td style="height: 15.75pt;" align="right" height="21">3</td>
+<td class="et2" style="width: 217.50pt;" width="290">Trauma</td>
+<td class="et5" style="width: 48.00pt;" width="64">&nbsp;</td>
+</tr>
+<tr style="height: 39.00pt;">
+<td style="height: 39.00pt;" align="right" height="52">4</td>
+<td class="et3" style="width: 217.50pt;" width="290">Tactical Tourniquet</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+<tr style="height: 25.50pt;">
+<td style="height: 25.50pt;" align="right" height="34">5</td>
+<td class="et3" style="width: 217.50pt;" width="290">Emergency Compression Dressing (vacuum packed)</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+<tr style="height: 15.00pt;">
+<td style="height: 15.00pt;" align="right" height="20">6</td>
+<td class="et3" style="width: 217.50pt;" width="290">Haemostatic Dressing/Gauze (MIL88)</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+<tr style="height: 15.75pt;">
+<td style="height: 15.75pt;" align="right" height="21">7</td>
+<td class="et2" style="width: 217.50pt;" width="290">Airway</td>
+<td class="et5" style="width: 48.00pt;" width="64">&nbsp;</td>
+</tr>
+<tr style="height: 39.00pt;">
+<td style="height: 39.00pt;" align="right" height="52">8</td>
+<td class="et3" style="width: 217.50pt;" width="290">Chest Seal (twin pack)</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+<tr style="height: 26.25pt;">
+<td style="height: 26.25pt;" align="right" height="35">9</td>
+<td class="et3" style="width: 217.50pt;" width="290">Naso Airway</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+<tr style="height: 26.25pt;">
+<td style="height: 26.25pt;" align="right" height="35">10</td>
+<td class="et2" style="width: 217.50pt;" width="290">Cuts and Scrapes</td>
+<td class="et5" style="width: 48.00pt;" width="64">&nbsp;</td>
+</tr>
+<tr style="height: 39.00pt;">
+<td style="height: 39.00pt;" align="right" height="52">11</td>
+<td class="et3" style="width: 217.50pt;" width="290">Adhesive Plaster 2.5 x 7cm</td>
+<td class="et4" style="width: 48.00pt;" width="64">5</td>
+</tr>
+<tr style="height: 51.75pt;">
+<td style="height: 51.75pt;" align="right" height="69">12</td>
+<td class="et3" style="width: 217.50pt;" width="290">Adhesive plaster 5cm x 7.5cm</td>
+<td class="et4" style="width: 48.00pt;" width="64">3</td>
+</tr>
+<tr style="height: 51.75pt;">
+<td style="height: 51.75pt;" align="right" height="69">13</td>
+<td class="et3" style="width: 217.50pt;" width="290">Adhesive plaster 6cm x 10cm</td>
+<td class="et4" style="width: 48.00pt;" width="64">2</td>
+</tr>
+<tr style="height: 51.75pt;">
+<td style="height: 51.75pt;" align="right" height="69">14</td>
+<td class="et3" style="width: 217.50pt;" width="290">Adhesive plaster 10cm x 10cm</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+<tr style="height: 15.00pt;">
+<td style="height: 15.00pt;" align="right" height="20">15</td>
+<td class="et3" style="width: 217.50pt;" width="290">Sterile Soft Swabs 10cmX10cm- pack of 5</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+<tr style="height: 15.00pt;">
+<td style="height: 15.00pt;" align="right" height="20">16</td>
+<td class="et3" style="width: 217.50pt;" width="290">Sterile Wound Closure Strips(pack of 3)</td>
+<td class="et4" style="width: 48.00pt;" width="64">2</td>
+</tr>
+<tr style="height: 15.75pt;">
+<td style="height: 15.75pt;" align="right" height="21">17</td>
+<td class="et3" style="width: 217.50pt;" width="290">Velsilk</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+<tr style="height: 15.75pt;">
+<td style="height: 15.75pt;" align="right" height="21">18</td>
+<td class="et2" style="width: 217.50pt;" width="290">Hygiene</td>
+<td class="et5" style="width: 48.00pt;" width="64">&nbsp;</td>
+</tr>
+<tr style="height: 39.00pt;">
+<td style="height: 39.00pt;" align="right" height="52">19</td>
+<td class="et3" style="width: 217.50pt;" width="290">Hand &amp; Surface Wipes</td>
+<td class="et4" style="width: 48.00pt;" width="64">2</td>
+</tr>
+<tr style="height: 39.00pt;">
+<td style="height: 39.00pt;" align="right" height="52">20</td>
+<td class="et3" style="width: 217.50pt;" width="290">Examination gloves (Large)</td>
+<td class="et4" style="width: 48.00pt;" width="64">2</td>
+</tr>
+<tr style="height: 26.25pt;">
+<td style="height: 26.25pt;" align="right" height="35">21</td>
+<td class="et2" style="width: 217.50pt;" width="290">Stabilization</td>
+<td class="et5" style="width: 48.00pt;" width="64">&nbsp;</td>
+</tr>
+<tr style="height: 26.25pt;">
+<td style="height: 26.25pt;" align="right" height="35">22</td>
+<td class="et3" style="width: 217.50pt;" width="290">Triangular Bandage</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+<tr style="height: 15.75pt;">
+<td style="height: 15.75pt;" align="right" height="21">23</td>
+<td class="et2" style="width: 217.50pt;" width="290">Exposure</td>
+<td class="et5" style="width: 48.00pt;" width="64">&nbsp;</td>
+</tr>
+<tr style="height: 39.00pt;">
+<td style="height: 39.00pt;" align="right" height="52">24</td>
+<td class="et3" style="width: 217.50pt;" width="290">Rescue Foil Blanket</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+<tr style="height: 15.75pt;">
+<td style="height: 15.75pt;" align="right" height="21">25</td>
+<td class="et2" style="width: 217.50pt;" width="290">Topical</td>
+<td class="et5" style="width: 48.00pt;" width="64">&nbsp;</td>
+</tr>
+<tr style="height: 39.00pt;">
+<td style="height: 39.00pt;" align="right" height="52">26</td>
+<td class="et3" style="width: 217.50pt;" width="290">Povidone Iodine Solution</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+<tr style="height: 39.00pt;">
+<td style="height: 39.00pt;" align="right" height="52">27</td>
+<td class="et3" style="width: 217.50pt;" width="290">Povidone Iodine Ointment</td>
+<td class="et4" style="width: 48.00pt;" width="64">1</td>
+</tr>
+</tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!--Product Description-->
+
+         <footer class="footer-section bg-grey pt-60">
+            <div class="container">
+                <div class="footer-items">
+                    <div class="footer-item">
+                        <div class="icon">
+                            <img src="assets/img/icon/footer-1.png" alt="icon">
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Free Shipping</h4>
+                            <span>Free shipping on orders over $65</span>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="icon">
+                            <img src="assets/img/icon/footer-2.png" alt="icon">
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Free Returns</h4>
+                            <span>30-days free return polic</span>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="icon">
+                            <img src="assets/img/icon/footer-3.png" alt="icon">
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Secured Payments</h4>
+                            <span>We accept all major credit card</span>
+                        </div>
+                    </div>
+                    <div class="footer-item item-2">
+                        <div class="icon">
+                            <img src="assets/img/icon/footer-4.png" alt="icon">
+                        </div>
+                        <div class="content">
+                            <h4 class="title">Customer Service</h4>
+                            <span>Top notch customer service</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row footer-widget-wrap pb-60">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <div class="widget-header">
+                                <h3 class="widget-title">Contact Details</h3>
+                            </div>
+                            <div class="footer-contact">
+                                <div class="icon"><i class="fa-sharp fa-solid fa-phone-rotary"></i></div>
+                                <div class="content">
+                                    <span>Have Question? Call Us!</span>
+                                    <a href="tel:+25836922569">0124 4223615</a>
+                                </div>
+                            </div>
+							<div class="footer-contact">
+                                <div class="icon"><i class="fa fa-map-marker"></i></div>
+                                <div class="content">
+                                    <span>814, Udyog Vihar Phase 5 sector 19,<br> Gurugram, Haryana 122016</span>
+									
+                                </div>
+                            </div>
+							
+							<div class="footer-contact">
+                                <div class="icon"><i class="fa fa-envelope"></i></div>
+                                <div class="content">
+                                  
+									  <span>Email: contact@example.com</span>
+                                   
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                   
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <div class="widget-header">
+                                <h3 class="widget-title">Shop Categories</h3>
+                            </div>
+                            <ul class="footer-list">
+                                <li><a href="shop-grid.html">Combat</a></li>
+                                <li><a href="shop-grid.html">Industrial</a></li>
+                               
+                                <li><a href="shop-grid.html">Adventure</a></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <div class="widget-header">
+                                <h3 class="widget-title">Useful Links</h3>
+                            </div>
+                            <ul class="footer-list">
+                                <li><a href="contact.html">Privacy Policy</a></li>
+                                <li><a href="contact.html">Terms & Conditions</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                               
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <div class="widget-header">
+                                <h3 class="widget-title">About Aidventure</h3>
+                            </div>
+                            <div class="news-form-wrap">
+                                <p class="mb-20">Our medical kits are crafted with precision and care, ensuring they provide the necessary tools and resources to address medical emergencies effectively and ergonomically.</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="row copyright-content">
+                        <div class="col-lg-6">
+                            <div class="footer-img-wrap">
+                                <span>Payment System:</span>
+                                <div class="footer-img"><a href="#"><img src="assets/img/images/footer-img-1.png" alt="img"></a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>Copyright & Design 2025 <span>Aidventure</span>. All Right Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ./ footer-section -->
+
+        <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
+        <!--scrollup-->
+
+        <!-- JS here -->
+        <script src="assets/js/vendor/jquary-3.6.0.min.js"></script>
+        <script src="assets/js/vendor/bootstrap-bundle.js"></script>
+        <script src="assets/js/vendor/imagesloaded-pkgd.js"></script>
+        <script src="assets/js/vendor/waypoints.min.js"></script>
+        <script src="assets/js/vendor/venobox.min.js"></script>
+        <script src="assets/js/vendor/odometer.min.js"></script>
+        <script src="assets/js/vendor/meanmenu.js"></script>
+        <script src="assets/js/vendor/smooth-scroll.js"></script>
+        <script src="assets/js/vendor/jquery.isotope.js"></script>
+        <script src="assets/js/vendor/wow.min.js"></script>
+        <script src="assets/js/vendor/swiper.min.js"></script>
+        <script src="assets/js/vendor/split-type.min.js"></script>
+        <script src="assets/js/vendor/gsap.min.js"></script>
+        <script src="assets/js/vendor/scroll-trigger.min.js"></script>
+        <script src="assets/js/vendor/nice-select.js"></script>
+        <script src="assets/js/ajax-form.js"></script>
+        <script src="assets/js/contact.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/cart-script.js"></script>
+        <script src="assets/js/cart.js"></script>
+    </body>
+
+<!-- Mirrored from html.rrdevs.net/roiser/shop-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Jun 2024 05:24:59 GMT -->
+</html>

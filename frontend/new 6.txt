@@ -1,0 +1,141 @@
+<!-- Add this color selection div before the product-btn div in your HTML -->
+<div class="product-color-selection">
+    <h4 class="color-title">Select Color:</h4>
+    <div class="color-options">
+        <div class="color-option">
+            <input type="radio" name="product-color" id="color-orange" value="orange" checked>
+            <label for="color-orange" class="color-swatch orange-swatch" title="Orange">
+                <span class="color-name">Orange</span>
+            </label>
+        </div>
+        <div class="color-option">
+            <input type="radio" name="product-color" id="color-olive" value="olive">
+            <label for="color-olive" class="color-swatch olive-swatch" title="Olive Green">
+                <span class="color-name">Olive Green</span>
+            </label>
+        </div>
+        <div class="color-option">
+            <input type="radio" name="product-color" id="color-camo" value="camo">
+            <label for="color-camo" class="color-swatch camo-swatch" title="Camouflage">
+                <span class="color-name">Camouflage</span>
+            </label>
+        </div>
+    </div>
+</div>
+
+<!-- Add this CSS to the head of your HTML or to your main CSS file -->
+<style>
+    .product-color-selection {
+        margin: 20px 0;
+    }
+    
+    .color-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
+    .color-options {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .color-option {
+        position: relative;
+    }
+    
+    .color-option input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .color-swatch {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #ddd;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    .color-option input[type="radio"]:checked + .color-swatch {
+        border: 2px solid #885B3A;
+        box-shadow: 0 0 0 2px rgba(136, 91, 58, 0.3);
+    }
+    
+    .color-option input[type="radio"]:checked + .color-swatch::after {
+        content: '✓';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    .orange-swatch {
+        background-color: #FF7F00;
+    }
+    
+    .olive-swatch {
+        background-color: #556B2F;
+    }
+    
+    .camo-swatch {
+        background: linear-gradient(45deg, #556B2F 25%, #5A5F34 25%, #5A5F34 50%, #8A8F64 50%, #8A8F64 75%, #36402A 75%);
+        background-size: 20px 20px;
+    }
+    
+    .color-name {
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .color-swatch:hover .color-name {
+        opacity: 1;
+    }
+</style>
+
+<!-- Add this JavaScript code to update the product image when color is changed -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Sample image URLs for different colors
+        const colorImages = {
+            'orange': 'assets/img/shop/shop-slider-1.jpg',
+            'olive': 'assets/img/shop/shop-slider-2.jpg',
+            'camo': 'assets/img/shop/shop-slider-3.jpg'
+        };
+        
+        // Get all color radio buttons
+        const colorOptions = document.querySelectorAll('input[name="product-color"]');
+        
+        // Add change event listener to each radio button
+        colorOptions.forEach(function(option) {
+            option.addEventListener('change', function() {
+                // Get selected color value
+                const selectedColor = this.value;
+                
+                // Update main product image
+                // This is a simplified example - you may need to adjust based on your slider setup
+                const mainImage = document.querySelector('.gallary-item img');
+                if (mainImage && colorImages[selectedColor]) {
+                    mainImage.src = colorImages[selectedColor];
+                }
+                
+                // You can also update the product title or other elements if needed
+                // For example: document.querySelector('.product-details .title').textContent = 'Individual Combat Medkit - ' + selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1);
+            });
+        });
+    });
+</script>
