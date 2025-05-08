@@ -12,7 +12,7 @@ const PORT =  3000;
 const app = express();
 
 app.use(cors({
-    origin: 'https://aid-venture.com', 
+    origin: '*', 
     credentials: true, 
 }));
 
@@ -61,6 +61,10 @@ async function startServer() {
 
     app.get('/login', (req, res) => {
       res.sendFile(__dirname + '/frontend/login.html');
+    });
+
+    app.get('/dev', (req, res) => {
+      res.sendFile('Hello from dev!');
     });
 
     // API routes using MongoDB
