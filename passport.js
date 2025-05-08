@@ -6,7 +6,7 @@ dotenv.config(); // Load environment variables from .env file
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID, // Use environment variable for security
     clientSecret: process.env.GOOGLE_CLIENT_SECRET, // Use environment variable for security
-    callbackURL: 'https://aid-venture.com/auth/google/callback' || 'http://localhost:3000/auth/google/callback',
+    callbackURL: 'https://aid-venture.onrender.com/auth/google/callback',
     scope: ['profile', 'email'], // Scopes define the access level of the user data you want to retrieve
 },
 function(accessToken, refreshToken, profile, cb) {
